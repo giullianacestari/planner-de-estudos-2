@@ -1,0 +1,29 @@
+.container {
+    max-width: 1044px;
+    margin: 0 auto;
+    display: flex;
+}
+
+aside {
+    background-color: #f1f1f1;
+}
+
+form {
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}

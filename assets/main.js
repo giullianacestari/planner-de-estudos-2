@@ -68,6 +68,7 @@ function desenhaTabela() {
     let dataCell = row.insertCell(2);
     let feitoCell = row.insertCell(3);
     let progressoCell = row.insertCell(4);
+    let removerCell = row.insertCell(5);
 
     disciplinaCell.textContent = item.disciplina;
     descricaoCell.textContent = item.descricao;
@@ -76,6 +77,8 @@ function desenhaTabela() {
     // 1º resultado: feitoCell.textContent = item.feito ? "Sim" : "Não";
     feitoCell.appendChild(verificaFeito(item.feito, item.id));
     progressoCell.textContent = verificaProgresso(item.feito, item.data); // 1º resultado: item.feito ? "Sim" : "Não"
+
+    removerCell.appendChild(desenhaBotao(item.id));
   });
 }
 
@@ -129,6 +132,30 @@ function verificaFeito(status, id) {
 
   //retorna o input criado
   return marcaComoFeito;
+}
+
+function desenhaBotao(id) {
+  // Adicionado botão "Remover" em cada linha da mesma maneira do checkbox
+  const botaoRemover = document.createElement("button");
+
+  botaoRemover.innerText = "Remover";
+  // Definindo `data-id` do botao remover
+  botaoRemover.dataset.id = id;
+
+  botaoRemover.classList.add("remover");
+
+  // Ao clicar no checkbox, ativa e atualiza o campo FEITO
+  botaoRemover.addEventListener("click", (element) => {
+    // Removendo a tarefa da lista
+    tabela = tabela.filter((tarefa) => {
+      return tarefa.id != id;
+    });
+
+    //desenha a tabela novamente
+    desenhaTabela();
+  });
+
+  return botaoRemover;
 }
 
 function formataData(data) {

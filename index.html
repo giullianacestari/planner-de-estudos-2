@@ -19,11 +19,15 @@
 
                 <div>
                     <label for="disciplina">Disciplina:</label>
-                    <select id="disciplina">
+                    <select id="disciplina" class="disciplina">
                         <option disabled>Escolha uma disciplina</option>
+
+                        <!--
                         <option value="Matemática">Matemática</option>
                         <option value="Português">Português</option>
                         <option value="Química">Química</option>
+                        -->
+
                     </select>
 
                 </div>
@@ -40,6 +44,19 @@
                 <!-- Botão adicionar -->
                 <button type="button" class="adicionar" onclick="novaTarefa()">Enviar</button>
             </form>
+
+            <!-- Botões laterais -->
+            <div class="botoes">
+
+                <div>
+                    <button class="filtrar" id="filtrar">Filtrar por disciplina</button>
+
+                    <select id="menuFiltrar" class="menuFiltrar lista-disciplina disciplina"
+                        onchange="filtraRequisicoes()">
+                        <option value="" selected>Todas</option>
+                    </select>
+                </div>
+                <button class="ordenar" id="ordenar">Ordenar <br> por prazo</button>
         </aside>
         <section>
             <table>
@@ -67,7 +84,10 @@
         </section>
     </main>
 
+    <script src="/assets/disciplina.js"></script>
     <script src="/assets/main.js"></script>
+    <script src="/assets/ordenar.js"></script>
+    <!-- <script src="/assets/filtrar.js"></script> -->
 </body>
 
 </html>

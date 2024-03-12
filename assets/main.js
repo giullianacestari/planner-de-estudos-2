@@ -7,7 +7,7 @@ let tabela = [
     feito: false,
     id: "ad980a9a-d480-e807-b06d-0f1df82337ad",
   },
-];
+]; // * excluir e deixar vazio no final do projeto
 
 // Aula 2 - adicionar nova tarefa
 function novaTarefa() {

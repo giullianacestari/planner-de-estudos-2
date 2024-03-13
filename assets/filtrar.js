@@ -14,8 +14,8 @@ function ExibeMenuSuspenso() {
   }
 }
 
-// Filtrar a lista de requisições com base na disciplina selecionada
-function filtraRequisicoes() {
+// Filtrar a lista de tarefas com base na disciplina selecionada
+function filtraTarefas() {
   // Busca a listagem COMPLETA de tarefas
   let tarefas = tabela;
 
@@ -39,4 +39,5 @@ function filtraRequisicoes() {
   }
 
   return listaFinal;
+  console.log(listaFinal);
 }

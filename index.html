@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="/assets/reset.css">
     <link rel="stylesheet" href="/assets/style.css">
 </head>
 
@@ -51,12 +52,13 @@
                 <div>
                     <button class="filtrar" id="filtrar">Filtrar por disciplina</button>
 
-                    <select id="menuFiltrar" class="menuFiltrar lista-disciplina disciplina"
-                        onchange="filtraRequisicoes()">
+                    <select id="menuFiltrar" class="disciplina" onchange="filtraTarefas()">
                         <option value="" selected>Todas</option>
                     </select>
                 </div>
                 <button class="ordenar" id="ordenar">Ordenar <br> por prazo</button>
+
+            </div>
         </aside>
         <section>
             <table>
@@ -67,7 +69,7 @@
                         <th>Prazo</th>
                         <th>Feito</th>
                         <th>Progresso</th>
-                        <th></th>
+                        <th class="invisivel"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -87,7 +89,7 @@
     <script src="/assets/disciplina.js"></script>
     <script src="/assets/main.js"></script>
     <script src="/assets/ordenar.js"></script>
-    <!-- <script src="/assets/filtrar.js"></script> -->
+    <script src="/assets/filtrar.js"></script>
 </body>
 
 </html>

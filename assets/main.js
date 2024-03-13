@@ -76,6 +76,8 @@ function desenhaTabela() {
 
     // 1º resultado: feitoCell.textContent = item.feito ? "Sim" : "Não";
     feitoCell.appendChild(verificaFeito(item.feito, item.id));
+    feitoCell.classList.add("feito");
+
     progressoCell.textContent = verificaProgresso(item.feito, item.data); // 1º resultado: item.feito ? "Sim" : "Não"
 
     removerCell.appendChild(desenhaBotao(item.id));

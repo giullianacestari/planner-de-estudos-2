@@ -32,12 +32,12 @@ function filtraTarefas() {
     // Senão, exibe a listagem filtrada
   } else {
     const listaFiltrada = tarefas.filter(
-      (requisicao) => requisicao.disciplina === filtroSelecionado
+      (tarefa) => tarefa.disciplina === filtroSelecionado
     );
     desenhaTabela(listaFiltrada);
     listaFinal = listaFiltrada;
   }
 
-  return listaFinal;
   console.log(listaFinal);
+  return listaFinal;
 }

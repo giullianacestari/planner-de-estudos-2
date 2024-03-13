@@ -28,7 +28,7 @@ function novaTarefa() {
 
   desenhaTabela(); // adicionado na aula de desenhar tabela
 
-  console.log(tabela); //* resultado da aula 2
+  //console.log(tabela); //* resultado da aula 2
 }
 
 // Criando um id único

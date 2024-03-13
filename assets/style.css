@@ -1,23 +1,5 @@
-/* Criando uma paleta de cores */
-:root {
-    --fonte-titulo: Cambria;
-    --fonte-tabela: 'Recursive', sans-serif;
-    --amarelo: #FAC900;
-    --roxo: #C75EEB;
-    --verde: #61E061;
-    --azul: #4EBFE9;
-    --vermelho: #F6543B;
-    --cinza-claro: #fafafa;
-}
-
-/* Definições universais */
-* {
-    font-family: var(--fonte-tabela);
-    color: #434343;
-}
-
 .container {
-    max-width: 1728px;
+    max-width: 1044px;
     margin: 0 auto;
     display: flex;
 }
@@ -26,56 +8,8 @@ aside {
     background-color: #f1f1f1;
 }
 
-h1 {
-    padding: 2rem;
-    font-size: 3rem;
-}
-
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 350px;
-    background-color: #e8e8e8;
-    padding: 20px;
-    border-radius: 20px;
-    position: relative;
-}
-
-form h2 {
-    font-size: 28px;
-    font-family: var(--fonte-titulo);
-    color: var(--roxo);
-    font-weight: 600;
-    letter-spacing: -1px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-left: 30px;
-}
-
-form h2::before {
-    width: 18px;
-    height: 18px;
-    background-color: var(--verde);
-}
-
-form h2::after {
-    animation: pulse 1s linear infinite;
-}
-
-form h2::before,
-form h2::after {
-    position: absolute;
-    content: "";
-    border-radius: 50%;
-    left: 0px;
-    background-color: var(--verde);
-}
-
-section {
-    display: flex;
-    padding: 3rem 2rem;
+    padding: 10px;
 }
 
 table {
@@ -86,53 +20,14 @@ table {
 th,
 td {
     border: 1px solid #dddddd;
+    text-align: left;
     padding: 8px;
-    text-align: center;
 }
 
 th {
     background-color: #f2f2f2;
-    font-family: var(--fonte-titulo);
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-.invisivel {
-    background-color: #43434300;
-    border: none;
 }
 
 #menuFiltrar {
     display: none;
-}
-
-/* Células */
-td {
-    padding: 8px;
-    border: 1px solid #ddddddb9;
-    border-radius: 20px;
-    font-size: 1.5rem;
-    color: #464646;
-}
-
-
-input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    text-align: center;
-}
-
-/* Resultado do Progresso */
-span {
-    font-weight: 700;
-}
-
-.botoes {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-}
-
-button {
-    width: 100%;
 }

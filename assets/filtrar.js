@@ -16,28 +16,18 @@ function ExibeMenuSuspenso() {
 
 // Filtrar a lista de tarefas com base na disciplina selecionada
 function filtraTarefas() {
-  // Busca a listagem COMPLETA de tarefas
-  let tarefas = tabela;
-
-  let listaFinal;
-
   // Pega o valor do filtro selecionado
   const filtroSelecionado = document.getElementById("menuFiltrar").value;
 
   // Caso o filtro selecionado seja vazio, exibe a listagem completa
   if (filtroSelecionado == "") {
-    desenhaTabela(tarefas);
-    listaFinal = tarefas;
+    desenhaTabela(tabela);
 
     // Senão, exibe a listagem filtrada
   } else {
-    const listaFiltrada = tarefas.filter(
+    const listaFiltrada = tabela.filter(
       (tarefa) => tarefa.disciplina === filtroSelecionado
     );
     desenhaTabela(listaFiltrada);
-    listaFinal = listaFiltrada;
   }
-
-  console.log(listaFinal);
-  return listaFinal;
 }

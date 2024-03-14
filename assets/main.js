@@ -1,13 +1,5 @@
 // Cria a lista "tabela"
-let tabela = [
-  {
-    disciplina: "Matemática",
-    descricao: "Página 22, exercícios 2 e 3",
-    data: "2024-08-02",
-    feito: false,
-    id: "ad980a9a-d480-e807-b06d-0f1df82337ad",
-  },
-]; // * excluir e deixar vazio no final do projeto
+let tabela = localStorage_pegaTarefas();
 
 // Aula 2 - adicionar nova tarefa
 function novaTarefa() {
@@ -52,13 +44,13 @@ function geraId() {
 }
 
 // Desenhando a tabela com JS
-function desenhaTabela() {
+function desenhaTabela(listaTarefas = tabela) {
   let tableBody = document.querySelector("tbody");
 
   //Limpando a tabela
   tableBody.innerHTML = "";
 
-  tabela.forEach(function (item) {
+  listaTarefas.forEach(function (item) {
     let row = tableBody.insertRow();
     let disciplinaCell = row.insertCell(0);
     let descricaoCell = row.insertCell(1);
@@ -79,6 +71,8 @@ function desenhaTabela() {
 
     removerCell.appendChild(desenhaBotao(item.id));
   });
+
+  localStorage_salvaTarefas(tabela);
 }
 
 //desenhando assim que carrega a página

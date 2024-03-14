@@ -2,7 +2,7 @@
 let tabela = [
   {
     disciplina: "Matemática",
-    descricao: "thhngrfb",
+    descricao: "Página 22, exercícios 2 e 3",
     data: "2024-08-02",
     feito: false,
     id: "ad980a9a-d480-e807-b06d-0f1df82337ad",
@@ -25,10 +25,7 @@ function novaTarefa() {
   };
 
   tabela.push(novoRegistro);
-
   desenhaTabela(); // adicionado na aula de desenhar tabela
-
-  //console.log(tabela); //* resultado da aula 2
 }
 
 // Criando um id único

@@ -1,33 +1,198 @@
+/* Importando fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
+
+/* Criando uma paleta de cores */
+:root {
+    --fonte-titulo: 'Inter', sans-serif;
+    --fonte-tabela: 'Recursive', sans-serif;
+    --amarelo: #FAC900;
+    --roxo: #C75EEB;
+    --verde: #61E061;
+    --azul: #4EBFE9;
+    --vermelho: #f6543b;
+    --cinza-claro: #fafafa;
+}
+
+/* Definições universais */
+* {
+    font-family: var(--fonte-tabela);
+    color: #434343;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
-    max-width: 1044px;
-    margin: 0 auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    height: 100vh;
 }
 
-aside {
-    background-color: #f1f1f1;
+.menu-lateral {
+    background-color: #e5e5e5;
+    padding: 20px;
 }
 
+.menu-lateral h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: var(--fonte-titulo);
+    font-weight: 900;
+}
+
+hr {
+    color: var(--azul);
+    border: 1px solid;
+}
+
+h1,
 form {
-    padding: 10px;
+    margin-top: 30px;
 }
 
-table {
-    border-collapse: collapse;
+.menu-lateral form {
+    margin: 40px 0;
+}
+
+.menu-lateral form h2 {
+    font-size: 20px;
+    margin: 30px 0;
+    color: var(--roxo);
+    padding: 10px;
+    font-weight: 700;
+}
+
+.menu-lateral label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.menu-lateral input,
+.menu-lateral select {
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.menu-lateral button {
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+button {
     width: 100%;
 }
 
-th,
-td {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+.botoes button {
+    margin-top: 30px;
 }
 
-th {
-    background-color: #f2f2f2;
+.adicionar,
+.filtrar,
+.ordenar,
+.remover {
+    padding: 8px;
+    border-radius: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.filtrar,
+.ordenar {
+    font-size: large;
+}
+
+
+.remover {
+    border-radius: 20px;
+    color: #ffffff;
+
+}
+
+button.adicionar {
+    background: var(--verde);
+    font-weight: 800;
+}
+
+button.filtrar {
+    background-color: var(--azul);
+}
+
+button.ordenar {
+    background-color: var(--roxo);
+}
+
+button.remover {
+    background-color: var(--vermelho);
+    border: none;
+}
+
+/* Efeito de transição ao passar o mouse */
+.adicionar:hover,
+.filtrar:hover,
+.ordenar:hover,
+.remover:hover {
+    background-color: #ffffff;
+    border: 1px solid;
+}
+
+.adicionar:hover {
+    color: var(--verde);
+}
+
+.filtrar:hover {
+    color: var(--azul);
+}
+
+.ordenar:hover {
+    color: var(--roxo);
+}
+
+.remover:hover {
+    color: var(--vermelho);
+}
+
+section {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    max-height: 100vh;
+}
+
+thead th {
+    background-color: var(--azul);
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.invisivel {
+    display: none;
 }
 
 #menuFiltrar {
     display: none;
+    margin-top: 20px;
+}
+
+.feito {
+    text-align: center;
 }

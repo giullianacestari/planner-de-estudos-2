@@ -56,7 +56,7 @@ function desenhaTabela(listaTarefas = tabela) {
     let descricaoCell = row.insertCell(1);
     let dataCell = row.insertCell(2);
     let feitoCell = row.insertCell(3);
-    let progressoCell = row.insertCell(4);
+    // let progressoCell = row.insertCell(4);
     let removerCell = row.insertCell(5);
 
     disciplinaCell.textContent = item.disciplina;
@@ -67,7 +67,7 @@ function desenhaTabela(listaTarefas = tabela) {
     feitoCell.appendChild(verificaFeito(item.feito, item.id));
     feitoCell.classList.add("feito");
 
-    progressoCell.textContent = verificaProgresso(item.feito, item.data); // 1º resultado: item.feito ? "Sim" : "Não"
+    // progressoCell.textContent = verificaProgresso(item.feito, item.data); // 1º resultado: item.feito ? "Sim" : "Não"
 
     removerCell.appendChild(desenhaBotao(item.id));
   });
@@ -78,23 +78,23 @@ function desenhaTabela(listaTarefas = tabela) {
 //desenhando assim que carrega a página
 desenhaTabela();
 
-function verificaProgresso(feito, prazo) {
-  let hoje = new Date();
+// function verificaProgresso(feito, prazo) {
+//   let hoje = new Date();
 
-  //transforma o prazo de string para date
-  prazo = new Date(prazo);
+//   //transforma o prazo de string para date
+//   prazo = new Date(prazo);
 
-  if (feito == true) {
-    return "Finalizado";
-  } else {
-    if (prazo < hoje) {
-      // realizar o teste antes de add linha 85
-      return "Atrasado!";
-    } else {
-      return "A fazer";
-    }
-  }
-}
+//   if (feito == true) {
+//     return "Finalizado";
+//   } else {
+//     if (prazo < hoje) {
+//       // realizar o teste antes de add linha 85
+//       return "Atrasado!";
+//     } else {
+//       return "A fazer";
+//     }
+//   }
+// }
 
 //cria o elemento html
 function verificaFeito(status, id) {
